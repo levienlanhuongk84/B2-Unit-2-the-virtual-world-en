@@ -990,6 +990,18 @@ details.tr-vi > p { margin: 0; padding: 2px 12px 10px; color: var(--ink-2); font
 .ig-centre .ig-ic { font-size: 7.4cqw; }
 @media print { .ig-a4 { box-shadow: none; } }
 @container (max-width: 560px) { .ig-box b { font-size: 3.4cqw; } .ig-centre b { font-size: 3.9cqw; } .ig-ic { font-size: 4.8cqw; } .ig-centre .ig-ic { font-size: 5.6cqw; } .ig-box { gap: .4cqw; padding: .6cqw; } }
+
+/* Vocabulary tables (.vt): on phones each row becomes one card — word + IPA, meaning, example on their own lines */
+@media (max-width: 640px) {
+  .tablewrap:has(> table.vt) { overflow-x: visible; }
+  table.vt, table.vt tbody, table.vt tr, table.vt td { display: block; width: auto !important; }
+  table.vt tr { padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  table.vt tr:last-child { border-bottom: 0; }
+  table.vt td { padding: 2px 0 !important; border: 0 !important; }
+  table.vt td:first-child { font-size: 1.02em; }
+  table.vt td:nth-child(2) { color: var(--ink-2); }
+  table.vt td:nth-child(3) { margin-top: 2px; }
+}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Condensed:wght@500;700&family=Roboto+Mono:wght@500;700&display=swap">
