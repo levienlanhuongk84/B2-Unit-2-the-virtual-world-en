@@ -964,6 +964,32 @@ details.tr-vi > p { margin: 0; padding: 2px 12px 10px; color: var(--ink-2); font
 .p1-frame.f5 li:last-child span:last-child { color: var(--ink-2); font-weight: 400; }
 .p1-frame li.step-ex span:last-child { color: var(--good); font-weight: 600; }
 .cue-card + .mind + .p1-frame { margin-top: 12px; }
+
+/* Speaking Part 2: pastel infographic, A4 landscape (297 × 210), scales with its width */
+.ig { margin: 12px 0 14px; }
+.ig-a4 { position: relative; aspect-ratio: 297 / 210; container-type: inline-size; overflow: hidden; border-radius: 18px;
+  background: #FBF8F2; border: 1px solid #EDE6DA; box-shadow: var(--shadow); max-width: 980px; margin: 0 auto; font-family: "Nunito", "Roboto", system-ui, sans-serif; }
+.ig-blob { position: absolute; width: 22cqw; height: 22cqw; border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%; opacity: .75; }
+.ig-blob.b1 { left: -8cqw; top: -9cqw; background: #E3E3F7; } .ig-blob.b2 { right: -8cqw; top: -9cqw; background: #FBE1E1; }
+.ig-blob.b3 { left: -8cqw; bottom: -9cqw; background: #FCF0D2; } .ig-blob.b4 { right: -8cqw; bottom: -9cqw; background: #E2F0DC; }
+.ig-ln { position: absolute; border-radius: 2px; }
+.ig-ln.ln-top { left: calc(50% - .45cqw); width: .9cqw; top: 27%; height: 11%; background: #7FAFE6; }
+.ig-ln.ln-bottom { left: calc(50% - .45cqw); width: .9cqw; top: 62%; height: 11%; background: #86C27E; }
+.ig-ln.ln-left { top: calc(50% - .45cqw); height: .9cqw; left: 31%; width: 6%; background: #EE9C9C; }
+.ig-ln.ln-right { top: calc(50% - .45cqw); height: .9cqw; left: 63%; width: 6%; background: #F2BE4E; }
+.ig-box { position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2cqw; text-align: center;
+  border: .45cqw solid; border-radius: 2.4cqw; box-shadow: 0 .6cqw 1.6cqw rgba(60,50,90,.10); padding: 1cqw; box-sizing: border-box; }
+.ig-box b { font-size: 2.55cqw; font-weight: 800; color: #1F2347; line-height: 1.15; }
+.ig-ic { font-size: 6.2cqw; line-height: 1; letter-spacing: -.4cqw; filter: saturate(.9); }
+.ig-top { left: 35.5%; width: 29%; top: 5%; height: 22%; background: #DDEBFB; border-color: #7FAFE6; }
+.ig-bottom { left: 35.5%; width: 29%; top: 73%; height: 22%; background: #E2F3DC; border-color: #86C27E; }
+.ig-left { left: 3%; width: 28%; top: 36.5%; height: 27%; background: #FDE4E4; border-color: #EE9C9C; }
+.ig-right { left: 69%; width: 28%; top: 36.5%; height: 27%; background: #FFF3D4; border-color: #F2BE4E; }
+.ig-centre { left: 37%; width: 26%; top: 38%; height: 24%; background: #EEE7FA; border-color: #A98EDB; }
+.ig-centre b { font-size: 3.4cqw; }
+.ig-centre .ig-ic { font-size: 7.4cqw; }
+@media print { .ig-a4 { box-shadow: none; } }
+@container (max-width: 560px) { .ig-box b { font-size: 3.4cqw; } .ig-centre b { font-size: 3.9cqw; } .ig-ic { font-size: 4.8cqw; } .ig-centre .ig-ic { font-size: 5.6cqw; } .ig-box { gap: .4cqw; padding: .6cqw; } }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Condensed:wght@500;700&family=Roboto+Mono:wght@500;700&display=swap">
@@ -1720,7 +1746,7 @@ details.tr-vi > p { margin: 0; padding: 2px 12px 10px; color: var(--ink-2); font
 </div>
 <p class="prose full" style="margin:10px 0 4px"><b>You will have a long turn to talk on the following topic. Use the ideas in the diagram and your own ideas.</b></p>
 <h4 class="qgroup">Topic A · Video games do more good than harm.</h4>
-<div class="cue-card"><svg viewBox="0 0 1000 520" preserveAspectRatio="none"><line x1="500" x2="500" y1="260" y2="62"></line><line x1="500" x2="860" y1="260" y2="260"></line><line x1="500" x2="500" y1="260" y2="458"></line><line x1="500" x2="140" y1="260" y2="260"></line></svg><div class="cue-topic" style="left:50%;top:50%">Video games</div><div class="cue-node" style="left:50%;top:12%">Skills and learning</div><div class="cue-node" style="left:14%;top:50%">Social life</div><div class="cue-node" style="left:86%;top:50%">Your own ideas</div><div class="cue-node" style="left:50%;top:88%">Health and sleep</div></div><div class="mind"><div class="p">Skills and learning</div><div class="p">Social life</div><div class="c">Video games</div><div class="p">Your own ideas</div><div class="p">Health and sleep</div></div>
+<figure class="ig" aria-label="Topic diagram: Video games — Skills and learning, Social life, Your own ideas, Health and sleep"><div class="ig-a4"><i class="ig-blob b1"></i><i class="ig-blob b2"></i><i class="ig-blob b3"></i><i class="ig-blob b4"></i><i class="ig-ln ln-top"></i><i class="ig-ln ln-left"></i><i class="ig-ln ln-right"></i><i class="ig-ln ln-bottom"></i><div class="ig-box ig-centre"><span class="ig-ic" aria-hidden="true">🎮</span><b>Video games</b></div><div class="ig-box ig-top"><span class="ig-ic" aria-hidden="true">🎓📖</span><b>Skills and learning</b></div><div class="ig-box ig-left"><span class="ig-ic" aria-hidden="true">🧑🏻👩🏻🧑🏼</span><b>Social life</b></div><div class="ig-box ig-right"><span class="ig-ic" aria-hidden="true">💡✏️</span><b>Your own ideas</b></div><div class="ig-box ig-bottom"><span class="ig-ic" aria-hidden="true">🌙💤⭐</span><b>Health and sleep</b></div></div></figure>
 <ul class="p1-frame f5"><li><span class="step-tag point">Point</span><span>I'd like to argue that … I'll talk about …, … and …, and then add an idea of my own.</span></li><li><span class="step-tag why">Why</span><span>First, skills and learning. The main reason is that …</span></li><li class=step-ex><span class="step-tag example">Example</span><span>Secondly, social life. Take …, for example: …</span></li><li><span class="step-tag counter">Counter</span><span>Admittedly, there's a darker side: health and sleep. …</span></li><li><span class="step-tag evaluation">Evaluation</span><span>My own idea is that … On balance, I believe …</span></li></ul>
 <details class="model-d"><summary>Model answer — Topic A (≈ 270 words, about 3 minutes)</summary><div class="model">
 <p class="step"><span class="step-tag point">Point</span>I'd like to argue that, on the whole, video games do more good than harm — as long as people play in moderation. I'll talk about skills, social life and health, and then add an idea of my own.</p>
@@ -1731,7 +1757,7 @@ details.tr-vi > p { margin: 0; padding: 2px 12px 10px; color: var(--ink-2); font
 <span class="wcnt">3 boxes + your own ideas · 5 steps</span>
 </div><div class="notice"><span class="eyebrow">Look again</span><ul><li><b>I'll talk about skills, social life and health, and then add an idea of my own.</b> — a one-sentence map of the diagram: the examiner knows where you are going</li><li><b>they make full use of your brainpower</b> · <b>puzzles to solve</b> · <b>a fast pace</b> — Group 1 and Group 3 chunks carry the first box</li><li><b>Take my nephew in Hue, for example: …</b> — a real, specific example instead of “for example, games are fun”</li><li><b>Admittedly, … On balance, …</b> — Counter → Evaluation: accept the other side, then give your final view</li><li><b>would probably do more harm than good</b> — a strong collocation for the final judgement</li></ul></div></details>
 <h4 class="qgroup">Topic B · The internet has made our lives easier.</h4>
-<div class="cue-card"><svg viewBox="0 0 1000 520" preserveAspectRatio="none"><line x1="500" x2="500" y1="260" y2="62"></line><line x1="500" x2="860" y1="260" y2="260"></line><line x1="500" x2="500" y1="260" y2="458"></line><line x1="500" x2="140" y1="260" y2="260"></line></svg><div class="cue-topic" style="left:50%;top:50%">The internet</div><div class="cue-node" style="left:50%;top:12%">Work and study</div><div class="cue-node" style="left:14%;top:50%">Staying in touch</div><div class="cue-node" style="left:86%;top:50%">Your own ideas</div><div class="cue-node" style="left:50%;top:88%">Health information</div></div><div class="mind"><div class="p">Work and study</div><div class="p">Staying in touch</div><div class="c">The internet</div><div class="p">Your own ideas</div><div class="p">Health information</div></div>
+<figure class="ig" aria-label="Topic diagram: The internet — Work and study, Staying in touch, Your own ideas, Health information"><div class="ig-a4"><i class="ig-blob b1"></i><i class="ig-blob b2"></i><i class="ig-blob b3"></i><i class="ig-blob b4"></i><i class="ig-ln ln-top"></i><i class="ig-ln ln-left"></i><i class="ig-ln ln-right"></i><i class="ig-ln ln-bottom"></i><div class="ig-box ig-centre"><span class="ig-ic" aria-hidden="true">🌐</span><b>The internet</b></div><div class="ig-box ig-top"><span class="ig-ic" aria-hidden="true">💻📚</span><b>Work and study</b></div><div class="ig-box ig-left"><span class="ig-ic" aria-hidden="true">📱💬</span><b>Staying in touch</b></div><div class="ig-box ig-right"><span class="ig-ic" aria-hidden="true">💡✏️</span><b>Your own ideas</b></div><div class="ig-box ig-bottom"><span class="ig-ic" aria-hidden="true">🩺📋</span><b>Health information</b></div></div></figure>
 <ul class="p1-frame f5"><li><span class="step-tag point">Point</span><span>I largely agree that … I'll explain why with examples from …, … and …</span></li><li><span class="step-tag why">Why</span><span>First, work and study. Thanks to the internet, I can …</span></li><li class=step-ex><span class="step-tag example">Example</span><span>Secondly, staying in touch. A case in point is …</span></li><li><span class="step-tag counter">Counter</span><span>On the other hand, health information is a mixed blessing. …</span></li><li><span class="step-tag evaluation">Evaluation</span><span>My own view is that … All in all, I'd say …</span></li></ul>
 <details class="model-d"><summary>Model answer — Topic B (≈ 260 words, about 3 minutes)</summary><div class="model">
 <p class="step"><span class="step-tag point">Point</span>I largely agree that the internet has made our lives easier, and I'll explain why with examples from work, family life and health, before adding a thought of my own.</p>
